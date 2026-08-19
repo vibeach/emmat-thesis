@@ -7,19 +7,41 @@
 <meta name="description" content="Master's thesis by Emma Terenzi — LM-71 Cosmetic Industrial Science, LabAnalysis Life Science, Milan. A systematic comparative study of three natural O/W emulsifiers and their application in finished cosmetic products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Scroll-progress bar (fills as reader scrolls) -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Sticky section-nav dots (desktop) -->
+<nav class="section-nav" id="sectionNav" aria-label="Section navigation">
+  <a href="#research"    data-label="Research"     aria-label="Research"></a>
+  <a href="#emulsifiers" data-label="Emulsifiers"  aria-label="Emulsifiers"></a>
+  <a href="#methodology" data-label="Methodology"  aria-label="Methodology"></a>
+  <a href="#findings"    data-label="Findings"     aria-label="Findings"></a>
+  <a href="#sensory"     data-label="Sensory"      aria-label="Sensory"></a>
+  <a href="#products"    data-label="Products"     aria-label="Products"></a>
+  <a href="#conclusions" data-label="Conclusions"  aria-label="Conclusions"></a>
+</nav>
+
+<!-- Copy-link toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">Link copied</div>
+
+<!-- Back-to-top -->
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 14 12 8 18 14"></polyline></svg>
+</button>
+
 <!-- ══════════════ HERO ══════════════ -->
 <header class="hero">
-  <div class="hero-bg" style="background-image:url('images/slide-01.jpg')"></div>
+  <div class="hero-bg" style="background-image:url('images/hero.jpg')"></div>
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">Master's Thesis · 2026</div>
     <h1 class="brand-mark">EMMAT<span>Cosmetics</span></h1>
-    <p class="tagline">A systematic comparative study of three natural O/W emulsifiers and their application in finished products</p>
+    <p class="tagline">Three natural emulsifiers. Three finished products. One rigorous method behind every texture.</p>
     <p class="credit">by <strong>Emma Terenzi</strong> · LM-71 Cosmetic Industrial Science · LabAnalysis Life Science, Milan</p>
     <a href="#research" class="btn btn-primary">Discover the research</a>
   </div>
@@ -36,8 +58,8 @@
     <div class="grid-2">
       <div class="prose">
         <h3>The research question</h3>
-        <p>This thesis carries out a systematic comparative study of three natural emulsifiers — Sorbitan Laurate / Polyglyceryl-4 Laurate / Dilauryl Citrate, C14-22 Alcohols / C12-20 Alkyl Glucoside, and Sodium Starch Octenylsuccinate — to characterise and compare their performance across a wide range of formulation conditions, and to use the results of this screening as the technical basis for the development of three finished cosmetic products.</p>
-        <p class="muted">Natural O/W emulsifiers are increasingly replacing synthetic surfactants, driven by clean-beauty demand and by sustainability standards. At the same time, the <em>skinification</em> and K-beauty trends are raising the performance bar for lightness, absorption and multifunctionality — while formulating natural emulsions that remain stable across different oil phases, actives and pigments continues to be a genuine technical challenge.</p>
+        <p>Three natural oil-in-water emulsifiers — an ester blend, an alkyl polyglucoside and a hydrophobically modified starch — put through the same seven experimental series, characterised on the same bench, profiled by the same five noses and hands. The point of the exercise was to see, without shortcuts, what each system can actually do, and to let the answer decide which finished product it belongs in.</p>
+        <p class="muted">Natural emulsifiers are quietly replacing the synthetic surfactants that defined the last century of cosmetic chemistry. Clean-beauty demand and sustainability standards set the direction; <em>skinification</em> and K-beauty raise the bar on lightness, absorption and multifunctionality. What has not moved is the underlying difficulty — natural emulsions that hold across different oils, pigments and actives remain a genuine formulation challenge.</p>
       </div>
       <div class="stat-strip">
         <div class="stat"><span class="stat-num">7</span><span class="stat-label">experimental series</span></div>
@@ -46,11 +68,14 @@
         <div class="stat"><span class="stat-num">3</span><span class="stat-label">finished cosmetic products</span></div>
       </div>
     </div>
+    <figure class="section-figure section-figure-wide">
+      <img src="images/research.jpg" alt="Notebook with hand-drawn emulsion diagrams, a fountain pen and a small beaker with an emulsion swatch on cream linen" loading="lazy">
+    </figure>
   </div>
 </section>
 
 <!-- ══════════════ THE THREE EMULSIFIERS ══════════════ -->
-<section class="section section-rose">
+<section id="emulsifiers" class="section section-rose">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">02 · The Three Emulsifiers</span>
@@ -63,7 +88,7 @@
         <h3>Ester Blend</h3>
         <p class="ing-name">Sorbitan Laurate / Polyglyceryl-4 Laurate / Dilauryl Citrate</p>
         <div class="chip">Non-ionic ester system</div>
-        <p class="card-body">A three-component non-ionic ester blend stabilised through classical interfacial-film mechanics. Best performance at 4% with Xanthan Gum + Cetearyl Alcohol co-stabilisation. Light, fluid, highly spreadable texture with the lowest soaping effect of the three systems.</p>
+        <p class="card-body">A three-component non-ionic ester blend that works through classical interfacial-film mechanics. It asks for Xanthan Gum and Cetearyl Alcohol together, at 4%, and rewards the effort with the lightest, most fluid and most spreadable texture of the three — and the lowest soaping effect on skin.</p>
         <p class="card-tag">→ Assigned to <strong>BB Cream Anti-Pollution</strong></p>
       </article>
 
@@ -72,7 +97,7 @@
         <h3>Alkyl Polyglucoside</h3>
         <p class="ing-name">C14-22 Alcohols / C12-20 Alkyl Glucoside</p>
         <div class="chip">APG + fatty alcohol · self-structuring lamellar network</div>
-        <p class="card-body">An APG–fatty alcohol pair that builds lamellar liquid-crystal networks, providing intrinsic structure even without added stabilisers. Tolerates high oil loads up to 30% and delivers a rich, occlusive texture with the highest shine and residual film.</p>
+        <p class="card-body">An APG–fatty alcohol pair that self-assembles into lamellar liquid-crystal networks, carrying its own structure even before a thickener is added. It takes oil loads up to 30% in its stride and finishes rich, occlusive and quietly luminous — the highest shine and residual film of the three.</p>
         <p class="card-tag">→ Assigned to <strong>Anti-Age Body Cream</strong></p>
       </article>
 
@@ -81,7 +106,7 @@
         <h3>Modified Starch</h3>
         <p class="ing-name">Sodium Starch Octenylsuccinate</p>
         <div class="chip">Pickering emulsion · surfactant-free</div>
-        <p class="card-body">A hydrophobically modified starch that stabilises through a Pickering-type particle-adsorption mechanism, requiring no added surfactants at 5%. Fastest-absorbing of the three, with the lowest residual amount and a distinctive powdery after-feel.</p>
+        <p class="card-body">A hydrophobically modified starch that anchors the interface with solid particles rather than surfactant — a Pickering emulsion in the classical sense, stable at 5% with no added surfactant at all. Fastest to absorb, lightest to leave behind, with a distinctive powdery after-feel that reads as clean skin.</p>
         <p class="card-tag">→ Assigned to <strong>Milky Toner</strong></p>
       </article>
 
@@ -90,12 +115,12 @@
 </section>
 
 <!-- ══════════════ METHODOLOGY ══════════════ -->
-<section class="section section-cream">
+<section id="methodology" class="section section-cream">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">03 · Methodology</span>
       <h2>Seven controlled experimental series, evaluated in parallel</h2>
-      <p class="section-lede">Each of the three emulsifier systems was put through the same seven-series screening, characterised with the same instrumental panel, and profiled by the same five-person sensory jury.</p>
+      <p class="section-lede">The same seven series, the same instrumental panel, the same five-person sensory jury — applied identically to each of the three systems so that any difference in the finished formulation can be traced back to the emulsifier itself, and to nothing else.</p>
     </div>
 
     <div class="grid-methods">
@@ -108,6 +133,98 @@
       <div class="method"><span class="s-num">S7</span><h4>Pigmented Emulsion</h4><p>Trichromatic inorganic pigments — pigment compatibility screen.</p></div>
     </div>
 
+    
+    <figure class="method-flow" aria-label="Methodology flow: three emulsifier systems feed the seven experimental series, which then split into characterisation and product selection">
+      <svg viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet" role="img" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="em-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FBF6EE"/>
+            <stop offset="100%" stop-color="#EDDBCE"/>
+          </linearGradient>
+          <linearGradient id="em-grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#B58E5F"/>
+            <stop offset="100%" stop-color="#5C4B3A"/>
+          </linearGradient>
+          <linearGradient id="em-grad-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#B58E5F" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#5C4B3A" stop-opacity="0.9"/>
+          </linearGradient>
+          <filter id="em-glow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <marker id="em-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#5C4B3A"/>
+          </marker>
+        </defs>
+
+        <g font-family="Inter, sans-serif" fill="#3B2E24">
+          <circle cx="90" cy="70"  r="30" fill="url(#em-grad-primary)" stroke="#B58E5F" stroke-width="1.5" filter="url(#em-glow)"/>
+          <text x="90" y="74" text-anchor="middle" font-size="11" font-weight="600">Ester</text>
+          <text x="90" y="118" text-anchor="middle" font-size="10" fill="#5C4B3A">Ester Blend</text>
+
+          <circle cx="90" cy="160" r="30" fill="url(#em-grad-primary)" stroke="#B58E5F" stroke-width="1.5" filter="url(#em-glow)"/>
+          <text x="90" y="164" text-anchor="middle" font-size="11" font-weight="600">APG</text>
+          <text x="90" y="208" text-anchor="middle" font-size="10" fill="#5C4B3A">Alkyl Polyglucoside</text>
+
+          <circle cx="90" cy="250" r="30" fill="url(#em-grad-primary)" stroke="#B58E5F" stroke-width="1.5" filter="url(#em-glow)"/>
+          <text x="90" y="254" text-anchor="middle" font-size="11" font-weight="600">Starch</text>
+          <text x="90" y="298" text-anchor="middle" font-size="10" fill="#5C4B3A">Mod. Starch</text>
+        </g>
+
+        <g fill="none" stroke="url(#em-grad-stroke)" stroke-width="1.6" opacity="0.75" marker-end="url(#em-arrow)">
+          <path d="M120,70  C220,70  280,160 355,160"/>
+          <path d="M120,160 C220,160 300,160 355,160"/>
+          <path d="M120,250 C220,250 280,160 355,160"/>
+        </g>
+
+        <g font-family="Inter, sans-serif" fill="#3B2E24">
+          <rect x="360" y="30"  width="180" height="26" rx="13" fill="#FBF6EE" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="47" text-anchor="middle" font-size="11" font-weight="500">S1 &middot; Baseline Stability</text>
+
+          <rect x="360" y="62"  width="180" height="26" rx="13" fill="#FBF6EE" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="79" text-anchor="middle" font-size="11" font-weight="500">S2 &middot; Oil Phase Load</text>
+
+          <rect x="360" y="94"  width="180" height="26" rx="13" fill="#FBF6EE" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="111" text-anchor="middle" font-size="11" font-weight="500">S3 &middot; Emollient Category</text>
+
+          <rect x="360" y="126" width="180" height="26" rx="13" fill="url(#em-grad-primary)" stroke="#B58E5F" stroke-width="1.4" filter="url(#em-glow)"/>
+          <text x="450" y="143" text-anchor="middle" font-size="11" font-weight="600">S4 &middot; Emulsifier Conc.</text>
+
+          <rect x="360" y="158" width="180" height="26" rx="13" fill="#FBF6EE" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="175" text-anchor="middle" font-size="11" font-weight="500">S5 &middot; Rheology Modifiers</text>
+
+          <rect x="360" y="190" width="180" height="26" rx="13" fill="#FBF6EE" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="207" text-anchor="middle" font-size="11" font-weight="500">S6 &middot; Preparation Method</text>
+
+          <rect x="360" y="222" width="180" height="26" rx="13" fill="#FBF6EE" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="239" text-anchor="middle" font-size="11" font-weight="500">S7 &middot; Pigmented Emulsion</text>
+
+          <text x="450" y="278" text-anchor="middle" font-size="11" font-style="italic" fill="#8B7D6C" font-family="Cormorant Garamond, Georgia, serif">7 experimental series</text>
+        </g>
+
+        <g fill="none" stroke="url(#em-grad-stroke)" stroke-width="1.8" opacity="0.85" marker-end="url(#em-arrow)">
+          <path d="M545,139 C620,139 680,90 740,90"/>
+          <path d="M545,139 C620,139 680,230 740,230"/>
+        </g>
+
+        <g font-family="Inter, sans-serif">
+          <rect x="740" y="60"  width="140" height="60" rx="10" fill="url(#em-grad-gold)" filter="url(#em-glow)"/>
+          <text x="810" y="85"  text-anchor="middle" font-size="12" font-weight="600" fill="#FBF6EE">Characterisation</text>
+          <text x="810" y="102" text-anchor="middle" font-size="9"  fill="#FBF6EE" opacity="0.9">pH &middot; Viscosity &middot; Centrifuge</text>
+          <text x="810" y="114" text-anchor="middle" font-size="9"  fill="#FBF6EE" opacity="0.9">Microscopy &middot; Sensory</text>
+
+          <rect x="740" y="200" width="140" height="60" rx="10" fill="url(#em-grad-gold)" filter="url(#em-glow)"/>
+          <text x="810" y="228" text-anchor="middle" font-size="12" font-weight="600" fill="#FBF6EE">Product Selection</text>
+          <text x="810" y="248" text-anchor="middle" font-size="9"  fill="#FBF6EE" opacity="0.9">3 finished products</text>
+        </g>
+      </svg>
+      <figcaption class="figure-caption">From three emulsifiers, through seven controlled series, into characterisation and product selection.</figcaption>
+    </figure>
+
     <div class="charac-panel">
       <h4>Characterisation panel</h4>
       <div class="charac-tags">
@@ -118,11 +235,15 @@
         <span>5-panellist sensory profile</span>
       </div>
     </div>
+
+    <figure class="section-figure section-figure-strip">
+      <img src="images/methodology.jpg" alt="Seven small identical frosted-glass beakers arranged in a curve on cream linen, each holding a slightly different creamy emulsion" loading="lazy">
+    </figure>
   </div>
 </section>
 
 <!-- ══════════════ KEY FINDINGS ══════════════ -->
-<section class="section section-rose">
+<section id="findings" class="section section-rose">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">04 · Key Findings</span>
@@ -169,7 +290,7 @@
 </section>
 
 <!-- ══════════════ SENSORY ANALYSIS ══════════════ -->
-<section class="section section-cream">
+<section id="sensory" class="section section-cream">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">05 · Sensory Analysis</span>
@@ -178,8 +299,11 @@
 
     <div class="grid-2 sensory-grid">
       <div class="prose">
+        <figure class="section-figure section-figure-inset">
+          <img src="images/sensory.jpg" alt="Close-up of hands rubbing a creamy emulsion between fingertips on cream linen with a crochet-lace edge" loading="lazy">
+        </figure>
         <h3>Protocol</h3>
-        <p>A blind, five-panellist quantitative descriptive protocol was applied to each formulation. Every attribute was scored on a 0–10 continuous scale in a controlled environment, with samples coded and presented in randomised order.</p>
+        <p>Five of us, at the bench, blind. Samples coded, order randomised, every attribute scored on a continuous 0–10 scale in a controlled room. We worked through pickup and spread on the back of the hand, followed each formulation through the soaping phase, timed absorption, and finished on the residue — how much film remained, how it caught the light, how the skin felt an hour later. The pigmented series was read the same way, with coverage, blendability and mattifying effect added to the panel.</p>
         <h4>Attributes (base emulsion)</h4>
         <ul class="attr-list">
           <li>Pickup</li>
@@ -217,13 +341,136 @@
 </section>
 
 <!-- ══════════════ THE PRODUCTS ══════════════ -->
-<section class="section section-rose products-section">
+<section id="products" class="section section-rose products-section">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">06 · The Products</span>
       <h2>Three finished cosmetics, one for each emulsifier</h2>
       <p class="section-lede">EMMAT Cosmetics × Cassiopea by Tiziana Terenzi — pastel iridescent glass, embossed with a modular motif drawn from hand-crocheted granny squares.</p>
     </div>
+
+    
+    <figure class="product-map" aria-label="Emulsifier to product mapping: Ester Blend to BB Cream, APG to Anti-Age Body Cream, Modified Starch to Milky Toner">
+      <svg viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet" role="img" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="em2-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FBF6EE"/>
+            <stop offset="100%" stop-color="#EDDBCE"/>
+          </linearGradient>
+          <linearGradient id="em2-grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#B58E5F"/>
+            <stop offset="100%" stop-color="#5C4B3A"/>
+          </linearGradient>
+          <linearGradient id="em2-grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#EDDBCE"/>
+            <stop offset="100%" stop-color="#B58E5F"/>
+          </linearGradient>
+          <linearGradient id="em2-grad-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#B58E5F" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#5C4B3A" stop-opacity="0.9"/>
+          </linearGradient>
+          <filter id="em2-glow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <marker id="em2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#5C4B3A"/>
+          </marker>
+        </defs>
+
+        <!-- Column headers -->
+        <g font-family="Inter, sans-serif" fill="#8B7D6C" font-size="10" font-weight="600" letter-spacing="1.5">
+          <text x="110" y="30" text-anchor="middle">EMULSIFIER</text>
+          <text x="450" y="30" text-anchor="middle">SENSORY FINGERPRINT</text>
+          <text x="790" y="30" text-anchor="middle">PRODUCT</text>
+        </g>
+
+        <!-- Horizontal divider through the middle -->
+        <line x1="40" y1="190" x2="860" y2="190" stroke="#B58E5F" stroke-width="0.75" opacity="0.5" stroke-dasharray="4 6"/>
+
+        <!-- ROW 1: Ester Blend -->
+        <g font-family="Inter, sans-serif">
+          <rect x="40" y="60" width="140" height="60" rx="10" fill="url(#em2-grad-gold)" filter="url(#em2-glow)"/>
+          <text x="110" y="88" text-anchor="middle" font-size="13" font-weight="600" fill="#FBF6EE">Ester Blend</text>
+          <text x="110" y="106" text-anchor="middle" font-size="10" fill="#FBF6EE" opacity="0.9">interfacial film</text>
+
+          <rect x="330" y="60" width="240" height="60" rx="10" fill="url(#em2-grad-primary)" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="86" text-anchor="middle" font-size="12" font-weight="500" fill="#3B2E24">Light, silky, mattifying</text>
+          <text x="450" y="104" text-anchor="middle" font-size="10" fill="#5C4B3A" font-style="italic" font-family="Cormorant Garamond, Georgia, serif">high spreadability &middot; low soaping</text>
+
+          <rect x="720" y="60" width="140" height="60" rx="10" fill="url(#em2-grad-rose)" filter="url(#em2-glow)"/>
+          <!-- dropper icon -->
+          <g transform="translate(738,72)" fill="#3B2E24">
+            <rect x="4" y="0" width="8" height="6" rx="1"/>
+            <rect x="6" y="6" width="4" height="18"/>
+            <path d="M4,24 Q8,32 12,24 Z"/>
+          </g>
+          <text x="800" y="88" text-anchor="middle" font-size="12" font-weight="600" fill="#3B2E24">BB Cream</text>
+          <text x="800" y="104" text-anchor="middle" font-size="10" fill="#3B2E24" opacity="0.75">Anti-Pollution &middot; 30 ml</text>
+        </g>
+
+        <!-- Arrows row 1 -->
+        <g fill="none" stroke="url(#em2-grad-stroke)" stroke-width="1.8" marker-end="url(#em2-arrow)">
+          <path d="M180,90 C240,90 275,90 325,90"/>
+          <path d="M570,90 C630,90 665,90 715,90"/>
+        </g>
+
+        <!-- ROW 2: APG -->
+        <g font-family="Inter, sans-serif">
+          <rect x="40" y="200" width="140" height="60" rx="10" fill="url(#em2-grad-gold)" filter="url(#em2-glow)"/>
+          <text x="110" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#FBF6EE">APG</text>
+          <text x="110" y="246" text-anchor="middle" font-size="10" fill="#FBF6EE" opacity="0.9">lamellar network</text>
+
+          <rect x="330" y="200" width="240" height="60" rx="10" fill="url(#em2-grad-primary)" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="226" text-anchor="middle" font-size="12" font-weight="500" fill="#3B2E24">Rich, occlusive, structured</text>
+          <text x="450" y="244" text-anchor="middle" font-size="10" fill="#5C4B3A" font-style="italic" font-family="Cormorant Garamond, Georgia, serif">highest shine &middot; highest residual</text>
+
+          <rect x="720" y="200" width="140" height="60" rx="10" fill="url(#em2-grad-rose)" filter="url(#em2-glow)"/>
+          <!-- pump-bottle icon -->
+          <g transform="translate(738,210)" fill="#3B2E24">
+            <rect x="4" y="0" width="4" height="6"/>
+            <rect x="2" y="6" width="8" height="3"/>
+            <rect x="1" y="9" width="14" height="30" rx="2"/>
+          </g>
+          <text x="800" y="228" text-anchor="middle" font-size="12" font-weight="600" fill="#3B2E24">Anti-Age</text>
+          <text x="800" y="244" text-anchor="middle" font-size="12" font-weight="600" fill="#3B2E24">Body Cream</text>
+        </g>
+
+        <g fill="none" stroke="url(#em2-grad-stroke)" stroke-width="1.8" marker-end="url(#em2-arrow)">
+          <path d="M180,230 C240,230 275,230 325,230"/>
+          <path d="M570,230 C630,230 665,230 715,230"/>
+        </g>
+
+        <!-- ROW 3: Modified Starch -->
+        <g font-family="Inter, sans-serif">
+          <rect x="40" y="290" width="140" height="60" rx="10" fill="url(#em2-grad-gold)" filter="url(#em2-glow)"/>
+          <text x="110" y="318" text-anchor="middle" font-size="13" font-weight="600" fill="#FBF6EE">Mod. Starch</text>
+          <text x="110" y="336" text-anchor="middle" font-size="10" fill="#FBF6EE" opacity="0.9">Pickering emulsion</text>
+
+          <rect x="330" y="290" width="240" height="60" rx="10" fill="url(#em2-grad-primary)" stroke="#B58E5F" stroke-width="1"/>
+          <text x="450" y="316" text-anchor="middle" font-size="12" font-weight="500" fill="#3B2E24">Balanced, powdery finish</text>
+          <text x="450" y="334" text-anchor="middle" font-size="10" fill="#5C4B3A" font-style="italic" font-family="Cormorant Garamond, Georgia, serif">fastest absorption &middot; low residual</text>
+
+          <rect x="720" y="290" width="140" height="60" rx="10" fill="url(#em2-grad-rose)" filter="url(#em2-glow)"/>
+          <!-- tall-bottle icon -->
+          <g transform="translate(740,300)" fill="#3B2E24">
+            <rect x="5" y="0" width="6" height="4"/>
+            <path d="M3,4 L13,4 L13,10 L15,14 L15,38 Q15,42 11,42 L5,42 Q1,42 1,38 L1,14 L3,10 Z"/>
+          </g>
+          <text x="800" y="318" text-anchor="middle" font-size="12" font-weight="600" fill="#3B2E24">Milky Toner</text>
+          <text x="800" y="334" text-anchor="middle" font-size="10" fill="#3B2E24" opacity="0.75">150 ml &middot; hybrid</text>
+        </g>
+
+        <g fill="none" stroke="url(#em2-grad-stroke)" stroke-width="1.8" marker-end="url(#em2-arrow)">
+          <path d="M180,320 C240,320 275,320 325,320"/>
+          <path d="M570,320 C630,320 665,320 715,320"/>
+        </g>
+      </svg>
+      <figcaption class="figure-caption">Each emulsifier maps to a single product based on its sensory fingerprint and stability profile.</figcaption>
+    </figure>
 
     <!-- BB CREAM -->
     <article class="product-card">
@@ -233,6 +480,7 @@
       <div class="product-body">
         <div class="product-eyebrow">Make-up · 30 ml glass dropper</div>
         <h3 class="product-name">BB Cream Anti-Pollution</h3>
+        <p class="product-tagline">Light-to-medium coverage. A triple defence against the urban day.</p>
         <p class="product-lede">A tinted O/W emulsion combining light-to-medium coverage with a scientifically coherent, multi-mechanism anti-pollution active system.</p>
 
         <div class="product-meta">
@@ -257,19 +505,19 @@
         <div class="active-system">
           <h4>Anti-pollution active system</h4>
           <div class="active-item">
-            <strong>Ectoin</strong> — cyclo-amino-acid extremolyte from <em>Halomonas elongata</em>. Stabilises lipid-bilayer fluidity, protects heat-shock protein expression, reduces IL-1β and TNF-α in keratinocytes exposed to PM2.5 and diesel exhaust particles.
+            <strong>Ectoin</strong> — cyclo-amino-acid extremolyte from <em>Halomonas elongata</em>. Stabilises lipid-bilayer fluidity, protects heat-shock protein expression, reduces IL-1β and TNF-α in keratinocytes exposed to PM2.5 and diesel exhaust particles.<br><span class="active-sensory">On skin: a quiet cushion of hydration that softens the reactive tightness of an urban day.</span>
           </div>
           <div class="active-item">
-            <strong>Lespedeza Capitata</strong> — flavonoid-rich temperate legume. Mitigates AhR-mediated disruption of the epidermal circadian clock, preserving nocturnal antioxidant capacity and diurnal barrier repair.
+            <strong>Lespedeza Capitata</strong> — flavonoid-rich temperate legume. Mitigates AhR-mediated disruption of the epidermal circadian clock, preserving nocturnal antioxidant capacity and diurnal barrier repair.<br><span class="active-sensory">On skin: the sense of skin resetting to its own rhythm — fresher in the morning, calmer at night.</span>
           </div>
           <div class="active-item">
-            <strong>Camellia Japonica</strong> — polyphenolic catechins, gallic-acid derivatives, anthocyanin precursors. Direct scavenging of superoxide, hydroxyl and singlet oxygen; inhibition of MMP-1 in UVA-exposed fibroblasts.
+            <strong>Camellia Japonica</strong> — polyphenolic catechins, gallic-acid derivatives, anthocyanin precursors. Direct scavenging of superoxide, hydroxyl and singlet oxygen; inhibition of MMP-1 in UVA-exposed fibroblasts.<br><span class="active-sensory">On skin: a clean, unperfumed brightness — the polyphenolic signature of the flower without any of its floral weight.</span>
           </div>
         </div>
 
         <div class="rationale">
           <h4>Why this emulsifier for this product</h4>
-          <p>The ester system's light, fluid, highly spreadable texture and its 7.3 colour-homogeneity / 7.6 blendability scores in the pigmented Series 7 made it the only credible platform for a tinted facial fluid. The doubled 4 % dosage and Xanthan Gum + Cetearyl Alcohol combination consolidated stability and enabled a fine, uniform 2–5 µm pigment dispersion.</p>
+          <p>Of the three systems, only the ester blend passed Series 7 with credible pigmented performance — a colour-homogeneity of 7.3 and a blendability of 7.6, against an APG platform that separated on contact with inorganic pigment and a starch platform that migrated on storage. Its sensory identity — light, fluid, the lowest soaping effect of the three — matched exactly what a tinted facial fluid needs to feel like at the point of application. Doubling from the supplier-recommended 2% to 4%, and locking in the Xanthan Gum plus Cetearyl Alcohol pair, closed the residual stability gap seen at 2% and produced the fine, uniform 2–5 µm droplet population documented under the microscope. Lowering the emulsification temperature from 75 °C to 60 °C protected the emulsifier itself — a preliminary trial finding, integrated into the finished process.</p>
         </div>
 
         <details class="inci-details">
@@ -287,6 +535,7 @@
       <div class="product-body">
         <div class="product-eyebrow">Body care · 200 ml glass pump</div>
         <h3 class="product-name">Anti-Age Body Cream</h3>
+        <p class="product-tagline">A rich, lamellar body cream that asks the skin to rebuild.</p>
         <p class="product-lede">A richer, structuring O/W emulsion for daily anti-age body care — generous emollient load, clinically supported cosmeceutical actives package.</p>
 
         <div class="product-meta">
@@ -311,19 +560,19 @@
         <div class="active-system">
           <h4>Anti-age active system</h4>
           <div class="active-item">
-            <strong>Matrixyl → Matrikine KTTKTS (Palmitoyl Tripeptide-38)</strong> — palmitoylated collagen α2-derived signal peptide. Stimulates simultaneous synthesis of six ECM components in dermal fibroblasts: collagen I, III, IV, fibronectin, hyaluronic acid, laminin-5. Delivered in a hydroxypropyl cyclodextrin cavity complex.
+            <strong>Matrixyl → Matrikine KTTKTS (Palmitoyl Tripeptide-38)</strong> — palmitoylated collagen α2-derived signal peptide. Stimulates simultaneous synthesis of six ECM components in dermal fibroblasts: collagen I, III, IV, fibronectin, hyaluronic acid, laminin-5. Delivered in a hydroxypropyl cyclodextrin cavity complex.<br><span class="active-sensory">On skin: the day-after firmness of a body that has been asked to rebuild, not just moisturised.</span>
           </div>
           <div class="active-item">
-            <strong>Niacinamide</strong> — NAD⁺/NADP⁺ precursor. Stimulates <em>de novo</em> ceramide biosynthesis via serine palmitoyl transferase, inhibits melanosome transfer through PGE2 and TXB2 suppression, reduces TEWL at 2–5 % topical concentration.
+            <strong>Niacinamide</strong> — NAD⁺/NADP⁺ precursor. Stimulates <em>de novo</em> ceramide biosynthesis via serine palmitoyl transferase, inhibits melanosome transfer through PGE2 and TXB2 suppression, reduces TEWL at 2–5 % topical concentration.<br><span class="active-sensory">On skin: an even, quieted tone — the redness of an ordinary week reading down over time.</span>
           </div>
           <div class="active-item">
-            <strong>Allantoin</strong> — keratolytic and skin-conditioning agent. Loosens corneocyte cohesion for controlled desquamation, promotes fibroblast and keratinocyte proliferation, softens dry surface keratin.
+            <strong>Allantoin</strong> — keratolytic and skin-conditioning agent. Loosens corneocyte cohesion for controlled desquamation, promotes fibroblast and keratinocyte proliferation, softens dry surface keratin.<br><span class="active-sensory">On skin: dry surface keratin loosens; the texture of shins and elbows softens under the hand.</span>
           </div>
         </div>
 
         <div class="rationale">
           <h4>Why this emulsifier for this product</h4>
-          <p>The APG system's intrinsic lamellar-network structuring and its tolerance for high oil loads (up to 30 %, Trial 16 / Series 4) made it the natural platform for a rich, occlusive body cream on a ~30 % oil phase — the same profile (high shine 7.4, high residual 7.1) that ruled it out for a facial product is exactly what is wanted here. The 75 °C emulsification temperature ensured full melting of shea butter, structured triglycerides and fatty alcohols.</p>
+          <p>The APG system builds its own scaffolding — lamellar liquid-crystal networks that structure the finished cream without leaning on external thickeners. Series 4 confirmed it holds oil loads up to 30% (Trial 16), which is exactly the emollient budget an anti-age body format needs to carry shea butter, structured triglycerides and olive unsaponifiables. The very sensory signature that ruled it out for a facial product — 7.4 shine, 7.1 residual film — is the correct answer for body care, where the skin wants richness on the surface. Emulsification at 75 °C was non-negotiable: it melts the butter and the fatty-alcohol wax cleanly, and the resulting cream reaches 98,000 mPa·s at t0 and holds inside 7% of that after 24 hours.</p>
         </div>
 
         <details class="inci-details">
@@ -341,6 +590,7 @@
       <div class="product-body">
         <div class="product-eyebrow">Hybrid toner · 150 ml glass bottle · orifice-reducer cap</div>
         <h3 class="product-name">Milky Toner</h3>
+        <p class="product-tagline">The first layer, poured slow. Hydration, ceramides, calm.</p>
         <p class="product-lede">A lightweight, lotion-like leave-on positioned between a conventional aqueous toner and a fluid emulsion — hydration and stratum-corneum barrier support immediately after cleansing.</p>
 
         <div class="product-meta">
@@ -365,22 +615,22 @@
         <div class="active-system">
           <h4>Barrier-focused active system</h4>
           <div class="active-item">
-            <strong>Sodium Hyaluronate</strong> (0.1–0.5 %, 800 kDa – 1.2 MDa) — viscoelastic surface hydration reservoir, reinforces the natural moisturising factor pool, works synergistically with glycerin and butylene glycol without tackiness.
+            <strong>Sodium Hyaluronate</strong> (0.1–0.5 %, 800 kDa – 1.2 MDa) — viscoelastic surface hydration reservoir, reinforces the natural moisturising factor pool, works synergistically with glycerin and butylene glycol without tackiness.<br><span class="active-sensory">On skin: a still, plumped surface — hydration held without any of the tack that a single-humectant formula tends to leave.</span>
           </div>
           <div class="active-item">
-            <strong>Centella Asiatica</strong> — standardised to madecassoside and asiaticoside. Suppresses NF-κB nuclear translocation and pro-inflammatory cytokine cascades; asiaticoside stimulates type I collagen synthesis in dermal fibroblasts.
+            <strong>Centella Asiatica</strong> — standardised to madecassoside and asiaticoside. Suppresses NF-κB nuclear translocation and pro-inflammatory cytokine cascades; asiaticoside stimulates type I collagen synthesis in dermal fibroblasts.<br><span class="active-sensory">On skin: the small heat of post-cleansing reactivity settles almost immediately.</span>
           </div>
           <div class="active-item">
-            <strong>Lactobacillus Ferment</strong> (maltodextrin fermented) — postbiotic short-chain lactic acid oligomers, low-molecular-weight peptides, cell-wall fragments and exopolysaccharides. Selectively supports commensals (notably <em>S. epidermidis</em>).
+            <strong>Lactobacillus Ferment</strong> (maltodextrin fermented) — postbiotic short-chain lactic acid oligomers, low-molecular-weight peptides, cell-wall fragments and exopolysaccharides. Selectively supports commensals (notably <em>S. epidermidis</em>).<br><span class="active-sensory">On skin: the balanced, uncrowded feel of a barrier that has been fed rather than stripped.</span>
           </div>
           <div class="active-item">
-            <strong>Ceramide Complex NP + AP + EOP</strong> with phytosphingosine, cholesterol and behenic acid. Reconstitutes the stratum-corneum lamellar bilayer; EOP is the linker ceramide covalently binding to the cornified envelope.
+            <strong>Ceramide Complex NP + AP + EOP</strong> with phytosphingosine, cholesterol and behenic acid. Reconstitutes the stratum-corneum lamellar bilayer; EOP is the linker ceramide covalently binding to the cornified envelope.<br><span class="active-sensory">On skin: the barrier reads whole again — softer to the touch, less porous to the next step in the routine.</span>
           </div>
         </div>
 
         <div class="rationale">
           <h4>Why this emulsifier for this product</h4>
-          <p>The modified starch's fastest absorption rate (6.5), lowest residual amount (3.6) and powdery after-feel matched the K-beauty milky-toner brief precisely. Its capacity to reach high viscosities at low oil fractions allowed the ~8 % oil phase needed for a hybrid toner-emulsion. Slight phase separation under centrifugation at 2.5 % was judged acceptable for a low-viscosity leave-on format and is consistent with the emulsifier's known behaviour at reduced concentration.</p>
+          <p>The K-beauty milky-toner brief asks for near-instant absorption, minimal residue and a finish that reads as skin, not product — and the sensory panel handed the modified starch exactly that profile: the fastest absorption rate of the three (6.5), the lowest residual amount (3.6), and a powdery after-feel none of the other systems produced. The starch also reaches meaningful viscosity at low oil fractions, which is what allowed the whole formulation to sit on a lean ~8% oil phase rather than the 20–30% a conventional emulsion would need. Reducing the emulsifier from 5% to 2.5% is what makes the format lotion-light; the slight centrifuge phase-separation at that concentration is consistent with the known behaviour of the ingredient at reduced dose, and acceptable for a low-viscosity leave-on. Xanthan Gum Crosspolymer-2 provides the viscoelastic matrix that carries the ceramide and postbiotic actives without weighing the toner down.</p>
         </div>
 
         <details class="inci-details">
@@ -394,7 +644,7 @@
 </section>
 
 <!-- ══════════════ MARKET POSITIONING ══════════════ -->
-<section class="section section-cream">
+<section id="positioning" class="section section-cream">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">07 · Market Positioning</span>
@@ -418,7 +668,7 @@
 </section>
 
 <!-- ══════════════ CONCLUSIONS ══════════════ -->
-<section class="section section-rose">
+<section id="conclusions" class="section section-rose">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">08 · Conclusions</span>
@@ -428,20 +678,22 @@
     <div class="conclusions">
       <div class="conclusion">
         <div class="c-num">01</div>
-        <h4>Unique performance of each emulsifier</h4>
-        <p>The three systems produced fundamentally distinct formulation spaces — interfacial-film mechanics, lamellar liquid-crystal co-assembly, and Pickering particle adsorption — consistently expressed across all seven experimental series and both instrumental and sensory panels.</p>
+        <h4>Each emulsifier has a technical identity of its own.</h4>
+        <p>Interfacial-film mechanics, lamellar liquid-crystal co-assembly, Pickering-type particle adsorption — three fundamentally distinct formulation spaces, expressed consistently across every one of the seven experimental series and across both the instrumental panel and the sensory jury.</p>
       </div>
       <div class="conclusion">
         <div class="c-num">02</div>
-        <h4>Validated product–emulsifier matching</h4>
-        <p>Pigment compatibility, oil-phase tolerance and sensory profile jointly determined a coherent, evidence-based assignment of each emulsifier to a specific product typology. No system was forced into a category the screening said it could not serve.</p>
+        <h4>The pairing of emulsifier to product was earned, not assumed.</h4>
+        <p>Pigment compatibility, oil-phase tolerance and sensory profile determined the assignment together. No system was forced into a category the screening said it could not serve — the ester blend to the tinted facial fluid, the alkyl polyglucoside to the rich body cream, the modified starch to the lightweight toner.</p>
       </div>
       <div class="conclusion">
         <div class="c-num">03</div>
-        <h4>Three fully developed cosmetic products</h4>
-        <p>All three finished formulations achieved satisfactory pH and centrifuge stability at both t<sub>0</sub> and t<sub>24h</sub>, confirming a successful transfer from screening to finished product — a BB Cream, a Body Cream and a Milky Toner, each with a defined dispensing system and packaging concept.</p>
+        <h4>Three finished products, stable and ready to defend.</h4>
+        <p>Every prototype held pH and passed centrifugation at both t<sub>0</sub> and t<sub>24h</sub> — a BB Cream, a Body Cream and a Milky Toner, each with a defined dispensing system, a packaging concept, and a coherent actives system built on top of a screened emulsifier.</p>
       </div>
     </div>
+
+    <p class="conclusion-close">That three natural systems sharing the same category and the same sustainability positioning generate such profoundly different formulation spaces is precisely the case for a rigorous, empirically grounded screening phase in natural emulsifier selection.</p>
 
     <div class="future-note">
       <h4>Future perspectives</h4>
@@ -451,17 +703,23 @@
 </section>
 
 <!-- ══════════════ ABOUT + DOWNLOADS ══════════════ -->
-<section class="section section-cream">
+<section id="about" class="section section-cream">
   <div class="container">
     <div class="section-header centered">
       <span class="eyebrow">09 · About &amp; Downloads</span>
       <h2>The candidate</h2>
     </div>
 
+    <figure class="section-figure section-figure-wide section-figure-closer">
+      <img src="images/product-family.jpg" alt="Three iridescent frosted-glass EMMAT bottles arranged on cream linen with dried lavender, bunny-tail grass and a natural quartz crystal — editorial closing still life" loading="lazy">
+    </figure>
+
     <div class="grid-2 about-grid">
       <div class="about-text">
         <h3>Emma Terenzi</h3>
-        <p>Master's candidate in <strong>Cosmetic Industrial Science (LM-71)</strong>, thesis developed at <strong>LabAnalysis Life Science</strong>, Milan.</p>
+        <p>Master's candidate in <strong>Cosmetic Industrial Science (LM-71)</strong>, with the finished experimental work developed inside the R&amp;D bench of <strong>LabAnalysis Life Science</strong> in Milan. The thesis sits deliberately at the seam between academic rigour and industrial formulation practice — three natural emulsifiers screened under controlled conditions, and three finished cosmetic prototypes carried through to the pilot stage.</p>
+        <p>The packaging concept for the EMMAT line — pastel iridescent glass embossed with a modular motif drawn from hand-crocheted granny squares — was developed alongside Tiziana Terenzi as an EMMAT Cosmetics × Cassiopea collaboration, translating a handcrafted textile geometry into the design language of the finished products.</p>
+        <p>The methodology introduced here — seven controlled experimental series applied in parallel across three emulsifiers, combined with sensory profiling and functional product translation — is offered as a transferable framework, adaptable to other emulsifier classes as the cosmetic industry continues to expand its portfolio of bio-derived functional ingredients.</p>
         <div class="tutors">
           <div><span class="tut-label">Academic tutor</span><span class="tut-name">Prof. Antonella Casiraghi</span></div>
           <div><span class="tut-label">Company tutor</span><span class="tut-name">Dr. Nicola Lionetti</span></div>
@@ -501,6 +759,192 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <script src="chart-data.js"></script>
+
+<!-- ══════════════ MOTION + INTERACTIVE POLISH ══════════════ -->
+<script>
+(function () {
+  'use strict';
+
+  const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const doc = document.documentElement;
+
+  const progress = document.getElementById('scrollProgress');
+  const heroBg = document.querySelector('.hero-bg');
+  const backToTop = document.getElementById('backToTop');
+  let ticking = false;
+
+  function onScroll() {
+    const scrollTop = window.pageYOffset || doc.scrollTop;
+    const height = doc.scrollHeight - doc.clientHeight;
+    const pct = height > 0 ? (scrollTop / height) * 100 : 0;
+    if (progress) progress.style.width = pct + '%';
+
+    // Hero parallax (~0.15× rate) — only while hero is roughly in view
+    if (heroBg && !reduced && scrollTop < window.innerHeight * 1.2) {
+      heroBg.style.transform = 'translate3d(0, ' + (-scrollTop * 0.15) + 'px, 0)';
+    }
+
+    // Back-to-top visibility (past 800 px)
+    if (backToTop) {
+      if (scrollTop > 800) backToTop.classList.add('is-visible');
+      else backToTop.classList.remove('is-visible');
+    }
+
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // ─────────────────────────────────────────── REVEAL ON SCROLL
+  if (!reduced && 'IntersectionObserver' in window) {
+    const revealTargets = [];
+    document.querySelectorAll('.section-header').forEach(el => revealTargets.push(el));
+    document.querySelectorAll(
+      '.section .grid-2 > *, ' +
+      '.section .grid-3 > *, ' +
+      '.section .grid-methods > *, ' +
+      '.section .conclusions > *, ' +
+      '.section .product-card, ' +
+      '.section .charac-panel, ' +
+      '.section .finding-punchline, ' +
+      '.section .future-note'
+    ).forEach(el => revealTargets.push(el));
+
+    revealTargets.forEach(el => el.classList.add('reveal'));
+
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealIO.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+
+    revealTargets.forEach(el => revealIO.observe(el));
+  }
+
+  // ─────────────────────────────────────────── SECTION-NAV ACTIVE STATE
+  const navLinks = document.querySelectorAll('#sectionNav a');
+  if (navLinks.length && 'IntersectionObserver' in window) {
+    const linkById = {};
+    navLinks.forEach(a => {
+      const id = a.getAttribute('href').replace(/^#/, '');
+      linkById[id] = a;
+    });
+    const sections = Object.keys(linkById)
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const link = linkById[entry.target.id];
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(s => navIO.observe(s));
+  }
+
+  // ─────────────────────────────────────────── ANCHOR LINKS ON H2/H3
+  const toast = document.getElementById('toast');
+  let toastTimer;
+
+  function showToast(msg) {
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 1600);
+  }
+
+  function slugify(text) {
+    return text.toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
+  const usedIds = new Set();
+  document.querySelectorAll('[id]').forEach(el => usedIds.add(el.id));
+
+  document.querySelectorAll('.section h2, .section h3').forEach(h => {
+    // Keep anchors on top-level section headings only — skip card internals.
+    if (h.closest('.card, .product-card, .positioning-card, .conclusion, .about-text, .downloads, .future-note, .active-system, .rationale')) {
+      return;
+    }
+
+    let id = h.id;
+    if (!id) {
+      const parentSection = h.closest('section[id]');
+      const base = slugify(h.textContent || 'heading');
+      let candidate = parentSection ? parentSection.id + '-' + base : base;
+      let n = 1;
+      while (usedIds.has(candidate)) {
+        candidate = (parentSection ? parentSection.id + '-' + base : base) + '-' + (++n);
+      }
+      id = candidate;
+      h.id = id;
+      usedIds.add(id);
+    }
+
+    h.classList.add('anchor-heading');
+    const link = document.createElement('a');
+    link.className = 'anchor-link';
+    link.href = '#' + id;
+    link.setAttribute('aria-label', 'Copy link to this section');
+    link.textContent = '#';
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const url = window.location.origin + window.location.pathname + '#' + id;
+      const copyPromise = navigator.clipboard && navigator.clipboard.writeText
+        ? navigator.clipboard.writeText(url)
+        : Promise.reject();
+      copyPromise.then(() => showToast('Link copied'))
+                 .catch(() => {
+                   try {
+                     const ta = document.createElement('textarea');
+                     ta.value = url;
+                     ta.style.position = 'fixed';
+                     ta.style.top = '-1000px';
+                     document.body.appendChild(ta);
+                     ta.select();
+                     document.execCommand('copy');
+                     document.body.removeChild(ta);
+                     showToast('Link copied');
+                   } catch (_) {
+                     showToast('Copy failed');
+                   }
+                 });
+      history.replaceState(null, '', '#' + id);
+    });
+    h.insertBefore(link, h.firstChild);
+  });
+
+  // ─────────────────────────────────────────── BACK-TO-TOP
+  if (backToTop) {
+    backToTop.addEventListener('click', function () {
+      if (reduced) {
+        window.scrollTo(0, 0);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  // Kick once to set initial state
+  onScroll();
+})();
+</script>
 </body>
 </html>
