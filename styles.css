@@ -1749,3 +1749,19 @@ canvas { max-width: 100%; }
   .reveal { opacity: 1 !important; transform: none !important; }
   .section + .section::before { display: none; }
 }
+
+/* ── Campaign imagery (added 27/09/2026, photos from Emma) ── */
+.campaign-mosaic { display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: auto auto; gap: 18px; margin-top: 64px; }
+.campaign-tall { grid-row: span 2; }
+.campaign-tile, .pp-gallery-item { margin: 0; position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); background: var(--rose); }
+.campaign-tile img, .pp-gallery-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.campaign-tile figcaption, .pp-gallery-item figcaption { position: absolute; left: 14px; bottom: 12px; padding: 5px 12px; border-radius: 999px; background: rgba(251, 246, 238, .88); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--text); }
+.pp-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
+.pp-gallery-wide { grid-column: 1 / -1; }
+@media (max-width: 760px) {
+  .campaign-mosaic, .pp-gallery { grid-template-columns: 1fr; }
+  .campaign-tall { grid-row: auto; }
+}
+.pp-gallery-contain { background: #fff; }
+.pp-gallery-contain img { object-fit: contain; }
+.pp-gallery-contain figcaption { top: 12px; bottom: auto; }
