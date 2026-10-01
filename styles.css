@@ -1765,3 +1765,24 @@ canvas { max-width: 100%; }
 .pp-gallery-contain { background: #fff; }
 .pp-gallery-contain img { object-fit: contain; }
 .pp-gallery-contain figcaption { top: 12px; bottom: auto; }
+
+/* ═══════════════════════════════════════════════ HERO — product family picture shown whole, title below */
+.hero { flex-direction: column; justify-content: flex-start; }
+.hero-bg {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  aspect-ratio: 1536 / 693;
+  max-height: 64vh;
+  background-position: center;
+  animation: none;
+  -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent 100%);
+          mask-image: linear-gradient(180deg, #000 82%, transparent 100%);
+}
+.hero-overlay { display: none; }
+.hero-inner { padding: 28px 32px 104px; }
+.hero-eyebrow { margin-bottom: 24px; }
+.product-media img, .product-hero-media img { border-radius: 12px; }
+@media (max-width: 760px) {
+  .hero-inner { padding: 24px 24px 88px; }
+}
